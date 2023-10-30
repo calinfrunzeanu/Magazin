@@ -4,26 +4,28 @@
 
 class Produs {
 public:
-    Produs(const std::string& nume, double pret) : nume_(nume), pret_(pret) {}
+    Produs(const std::string& nume, double pret, double profit) : nume_(nume), pret_(pret), profit_(profit) {}
 
-    Produs(const Produs& other) : nume_(other.nume_), pret_(other.pret_) {}
+    Produs(const Produs& other) : nume_(other.nume_), pret_(other.pret_), profit_(other.profit_) {}
     Produs& operator=(const Produs& other) {
         if (this != &other) {
             nume_ = other.nume_;
             pret_ = other.pret_;
+            profit_= other.profit_;
         }
         return *this;
     }
     ~Produs() = default;
 
     friend std::ostream& operator<<(std::ostream& os, const Produs& produs) {
-        os << "Produs: " << produs.nume_ << ", Pret: " << produs.pret_;
+        os << "Produs: " << produs.nume_ << ", Pret: " << produs.pret_<< ", Profit: " << produs.profit_;
         return os;
     }
 
 private:
     std::string nume_;
-    double pret_;
+    double pret_, profit_;
+
 };
 
 class Client {
@@ -86,8 +88,8 @@ private:
 };
 
 int main() {
-    Produs laptop("Laptop", 2500.0);
-    Produs telefon("Telefon", 1200.0);
+    Produs laptop("Laptop", 2500.0, 250.0);
+    Produs telefon("Telefon", 1200.0, 120.0);
 
     Client client("John Doe");
 
@@ -99,6 +101,8 @@ int main() {
     std::cout << magazin << std::endl;
 
     magazin.vindeProdus(client, laptop);
+    magazin.vindeProdus(client, telefon);
 
     return 0;
 }
+

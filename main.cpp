@@ -28,7 +28,7 @@ private:
 
 class Client {
 public:
-    Client(std::string  nume) : nume_(std::move(nume)) {}
+    explicit Client(std::string  nume) : nume_(std::move(nume)) {}
 
     Client(const Client& other) : nume_(other.nume_) {}
     Client& operator=(const Client& other) {

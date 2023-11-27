@@ -90,7 +90,14 @@ endfunction()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp
+        src/produs.cpp
+        headers/produs.h
+        src/magazin.cpp
+        headers/magazin.h
+        src/client.cpp
+        headers/client.h
+        src/client.cpp)
 
 ###############################################################################
 

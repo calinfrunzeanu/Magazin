@@ -7,10 +7,10 @@
 
 int main()
 {
-    int choice;
-    int choice2;
-    int choice3;
-    int choice4;
+    unsigned int choice;
+    unsigned int choice2;
+    unsigned int choice3;
+    unsigned int choice4;
 
     try
     {

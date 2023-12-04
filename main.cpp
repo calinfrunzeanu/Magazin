@@ -12,6 +12,7 @@ int main()
     unsigned int choice3;
     unsigned int choice4;
 
+
     try
     {
         // Creare produse

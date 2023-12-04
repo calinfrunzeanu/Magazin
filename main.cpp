@@ -7,12 +7,6 @@
 
 int main()
 {
-    unsigned int choice;
-    unsigned int choice2;
-    unsigned int choice3;
-    unsigned int choice4;
-
-
     try
     {
         // Creare produse
@@ -127,6 +121,11 @@ int main()
         std::cout << "1. Smartphone\n";
         std::cout << "2. Laptop\n";
         std::cout << "3. Tablet\n";
+
+        unsigned int choice;
+        unsigned int choice2;
+        unsigned int choice3;
+        unsigned int choice4;
 
         std::cin >> choice;
 
